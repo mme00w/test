@@ -1,0 +1,116 @@
+/* *******************************************************
+ * section01
+********************************************************/
+.section01{
+  position: relative;
+  padding-bottom: 5rem;
+  .caution{
+    width: 100%;
+    margin-bottom: 3.5rem;
+    text-align: center;
+    &_txt{
+      display: inline-block;
+      font-size: $mid;
+      font-weight: bold;
+    }
+  }
+  &_inner-flex{
+    @include pc{
+    display: flex;
+    justify-content: space-between;
+    }
+    }
+  .slideout-1{
+    .section_title{
+    margin-bottom: 4rem;
+    }
+    .eventLink_list{
+    width: 50%;
+    .imgBox{
+      width: 100%;
+      .img{
+        width: 100%;
+      }
+    }
+    .moreinfoBtn{
+      margin: 1rem 0;
+    }
+    }
+    .event_wrap{
+      display: flex;
+    }
+    .imgBox{
+      width: 50%;
+      
+    }
+  }
+
+  .slideout-2{
+    .tab{
+      position: relative;
+      height: 100%;
+      .tabmenu_list{
+      font-size: 0;
+      width: 100%;
+    .tabBtn{
+      display: inline-block;
+      width: 50%;
+      padding: 2rem 0;
+      color: $wht;
+      background-color: #00466a;
+      text-align: center;
+      font-size: $small;
+        &.is-active-btn{
+          background-color: $aqua;
+        }
+      }
+    }
+  }
+    
+  .filter-blur{
+    @include pc{
+      height: 75%;
+      position: absolute;
+    }
+    &::after{
+        content:" ";
+        width: 100%;
+        position: absolute;
+        bottom:0;
+        box-shadow: 0.1rem 0px 4rem 2rem $wht;
+
+      }
+  }
+  .tabmenu_item{
+      display: none;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      overflow-y: scroll;
+      position: relative;
+      @include sp{
+        height: 30rem;
+      }
+      &.is-active-item{
+        display: block;
+      }
+    }
+  .news_list{
+    padding: 2rem;
+    border-bottom: 1px solid $lightgray;
+    .news_title,.date{
+      font-size: $small;
+      color: $coblue;
+    }
+    .date{
+      display: inline-block;
+      margin-bottom: 2rem;
+    }
+  }
+  
+  }
+
+  .section_moreinfo{
+    bottom:-7.5rem;
+  }
+}

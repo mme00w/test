@@ -1,0 +1,126 @@
+/* *******************************************************
+ * bsection04
+********************************************************/
+
+.section04{
+  position: relative;
+  padding: 7rem 0;
+  background-color: #EFF0F0;
+  .container{
+    
+    background-color: #EFF0F0;
+  }
+  .works-category_list{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin: 2rem 0;
+    flex-wrap: wrap;
+      .works-category_item{
+        display: inline-block;
+        width: calc((100% / 6) - (3rem / 6));
+        padding: 2rem 0;
+        text-align: center;
+        color: $wht;
+        font-size: $small;
+        border-radius:1rem;
+        @include max980{
+          width: calc((95% / 2));
+          margin-bottom: 1rem;
+        }
+        &.item-red{
+          background-color: #E54372;
+        }
+        &.item-green{
+          background-color: #61C761;
+        }
+        &.item-blue{
+          background-color: #59C2DB;
+        }
+        &.item-purple{
+          background-color: #7550C2;
+        }
+        &.item-orange{
+          background-color: #EB943B;
+        }
+        &.item-gray{
+          background-color: #959595;
+        }
+
+        
+      }
+    }
+
+    .subcategory_list{
+      display: flex;
+      justify-content: space-between;
+      padding: 2rem 3.6rem;
+      background-color: $wht;
+      @include max980{
+      width: 90%;
+      margin:auto;
+       }
+      .subcategory_item{
+        display: inline-block;
+        width: calc(100% / 5 - 8.5rem / 5);
+        box-shadow:4px 3px 4px 0px #adadad;
+        text-align: left;
+        border-radius: 1rem;
+        &.l-box-border-gray{
+          border:0.1rem solid $lightgray;
+          .tagName{
+            border:0.1rem solid $lightgray;
+          }
+        }
+        &.l-box-border-orange{
+          border:0.1rem solid #FDA46E;
+          .tagName{
+            border:0.1rem solid #FDA46E;
+          }
+        }
+        &.l-box-border-aqua{
+          border:0.1rem solid $aqua;
+          .tagName{
+            border:0.1rem solid $aqua;
+          }
+        }
+        .subcategory_itemBox{
+          display: block;
+          width: 100%;
+          padding: 1rem 2.2rem;
+          .subcategory_name{
+          color: $coblue;
+          font-weight: bold;
+          font-size: 1.8rem;
+          }
+          .system_name{
+            color: $lightgray;
+            font-size: $small;
+            font-style: italic;
+          }
+        }
+        .subcategory_itemImg{
+          width: 100%;
+          .img{
+            width: 100%;
+          }
+        }
+
+        .subcategory_tags{
+          display: flex;
+          flex-wrap: wrap;
+          padding: 1rem 1.7rem;
+          .tagName{
+            display: block;
+            margin-bottom: 1.6rem;
+            margin-left: 0.8rem;
+            padding: 0.5rem 1rem;
+          }
+        }
+        
+      }
+    }
+    .section_moreinfo{
+      bottom:-9rem;
+    }
+  }

@@ -1,0 +1,186 @@
+/* *******************************************************
+ * basic
+********************************************************/
+
+// 色設定
+$wht:#FFF;
+$blk: #2F2F2F;
+$wht-bg: #F7F7F7;
+$gray: #858585;
+$lightgray: #B5B5B5;
+$aqua:#00a0ce;
+$coblue: #00466a;
+$purple: #A4ACE0;
+
+// フォント
+*{
+  font-family : 'Noto Sans JP', sans-serif;
+  color: $blk;
+}
+
+a:hover{
+  display: inline-block;
+  opacity: 0.7;
+  transition: 0.3s;
+  transition-timing-function: ease;
+}
+
+// サイズ
+$tiny: 1.2rem;
+$small: 1.4rem;
+$normal: 1.6rem;
+$mid: 2.1rem;
+$big: 2.2rem;
+$large: 2.8rem;
+$sp:768px;
+$pc:769px;
+$px400:40rem;
+$px980:980px;
+
+$pcwidth:111rem;
+
+@mixin pc {
+  @media screen and (min-width: ($pc)){
+    @content;
+  }
+}
+
+@mixin min980 {
+  @media screen and (min-width: ($px980)) {
+    @content;
+  }
+}
+
+@mixin max980 {
+  @media screen and (max-width: ($px980)) {
+    @content;
+  }
+}
+
+@mixin sp {
+  @media screen and (max-width: ($sp)) {
+    @content;
+  }
+}
+
+@mixin min400 {
+  @media screen and (min-width: ($px400)) {
+    @content;
+  }
+}
+
+@mixin max400 {
+  @media screen and (max-width: ($px400)) {
+    @content;
+  }
+}
+
+.sponly{
+  @include pc{
+    display: none !important;
+  }
+}
+
+.min980only{
+  @include max980{
+    display: none;
+  }
+}
+
+.max980only{
+  @include min980{
+    display: none ;
+  }
+}
+
+.pconly{
+  @include sp{
+    display: none;
+  }
+}
+
+/* -------------------------------------------
+ * 共通クラス(フォント系)
+*/
+
+
+.container{
+  margin: 0 auto;
+  padding: 0 2rem;
+  width: 100%;
+  max-width: $pcwidth; 
+}
+
+.flex{
+  display: flex;
+  justify-content: space-between;
+}
+
+.section{
+  .container{
+    position: relative;
+  }
+}
+
+
+.section_title{
+  font-size: $large;
+  @include sp{
+    font-size: $big;
+  }
+}
+
+.section_title_border{
+  display: inline-block;
+  font-size: $large;
+  border-bottom: 3px solid $purple;
+  @include sp{
+    font-size: $big;
+  }
+}
+
+.section_title-description{
+  font-size: $normal;
+}
+
+.caption{
+  font-size: $normal;
+}
+
+
+// 文字サイズ
+.small  { font-size: $small ; }
+.normal { font-size: $normal; }
+.mid { font-size: $mid;}
+.big    { font-size: $big ; }
+.large  { font-size: $large; }
+
+// 文字色
+.blk { color: $blk !important; }
+.wht { color: $wht !important; }
+.coblue  { color: $coblue  !important; }
+.gray  { color: $gray  !important; }
+.red {color:red;}
+
+.center{
+  width: 100%;
+  text-align: center;
+}
+
+i{
+    display:inline-block;
+    margin-right: 0.6rem;
+    font-family: "Font Awesome 5 Free";
+  }
+
+  #top{
+    position: relative;
+    overflow: hidden;
+  }
+
+  
+  
+  
+
+
+

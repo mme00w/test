@@ -1,0 +1,85 @@
+/* *******************************************************
+ * section08
+********************************************************/
+.section08{
+  position: relative;
+  padding: 7rem 0 0;
+  background: linear-gradient(45deg,#2185E7,#25D5E9);
+
+  .section_title{
+    margin-bottom: 6rem;
+  }
+
+  .sitemap_lists{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  .sitemap_list{
+    width: calc(100% / 4);
+    margin-bottom: 3.5rem;
+    
+    &Title{
+      font-size: $small;
+      color: $wht;
+    }
+  }
+  .sitemap_item{
+    padding: 0.4rem 0;
+    list-style-type: "-";
+    list-style-position: inside;
+    color: $wht;
+
+    &Name{
+    padding-left:0.5rem; 
+    font-size: $tiny;
+    color: $wht;
+    &:hover{
+      text-decoration: underline;
+    }
+    }
+  }
+
+  .sitemap-other_lists{
+    display: flex;
+    justify-content: space-between;
+    @include max980{
+      display: block;
+    }
+    .sitemap-other_list{
+      width: 48%;
+      text-align: center;
+      @include max980{
+        width: 100%;
+      }
+      .sitemap-other_title{
+        display: inline;
+        padding-bottom: 1rem;
+        font-size: $big;
+        color: $wht;
+        border-bottom: 0.5rem solid $wht;
+      }
+    }
+    .sitemap-other_items{
+      display: flex;
+      padding: 4.4rem 0;
+      flex-wrap: wrap;
+
+      .sitemap-other_item{
+        margin-left: 2rem;
+        margin-bottom: 2rem;
+        .sitemap-other_link{
+          font-size: $tiny;
+          color: $wht;
+          &:hover{
+            text-decoration: underline;
+            
+          }
+        }
+      }
+    }
+
+  }
+  
+}

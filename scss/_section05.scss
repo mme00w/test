@@ -1,0 +1,57 @@
+/* *******************************************************
+ * section05
+********************************************************/
+
+.section05{
+  position: relative;
+  padding: 7.6rem 0 4rem;
+
+  .section05_desc{
+    margin:3.8rem 0 1.5rem;
+    padding: 0 2.5rem;
+    font-size: $normal;
+    text-align: center;
+  }
+  &_inner-flex {
+    @include pc{
+      display: flex;
+      justify-content: space-between;
+      padding: 0 4.5rem 4rem;
+    }
+  }
+  .problem{
+    position: relative;
+    width:40.090090090090094%;
+    text-align: right;
+    @include sp{
+      width:100%;
+      margin-bottom: 2rem;
+    }
+    &1{
+      background: url(../img/komatta_system.jpg) no-repeat top center;
+      background-size: contain;
+    }
+    &2{
+      background: url(../img/komatta_homepage.jpg) no-repeat top center;
+      background-size: contain;
+    }
+    &_list{
+      margin-bottom: 0.8rem;
+      padding: 6rem 2rem 3.7rem;
+      border:0.1rem solid $lightgray;
+    }
+    &_item{
+      padding: 1.5rem 0;
+      border-bottom:0.1rem dashed $lightgray;
+      text-align: left;
+    }
+    // &_Btn{
+    //   width: 100%;
+    //   text-align: right;
+    // }
+    
+  }
+  .section_moreinfo {
+    bottom: -6.5rem;
+  }
+}

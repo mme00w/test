@@ -1,0 +1,49 @@
+/* *******************************************************
+ * section02
+********************************************************/
+.section02{
+  position: relative;
+  padding: 7rem 0 0;
+  background: linear-gradient(45deg,#2185E7,#25D5E9);
+  &_inner-flex{
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 7rem;
+    @include max980{
+      display: block;
+      .slideout{
+        // justify-content: center;
+        width: 70%;
+        text-align: center;
+        margin:0 auto;
+      }
+    }
+  }
+  .slide-title{
+    margin-bottom: 6.5rem;
+  }
+  
+  .slideout-1{
+    text-align: center;
+    .imgBox{
+      width: 80%;
+      display: inline-block;
+      .img{
+        width: 100%;
+      }
+    }
+  }
+  &_txtBox{
+    margin-bottom: 3rem;
+    color: $wht;
+    font-size: $normal;
+  }
+  .slideout-2{
+    .imgBox{
+      width: 100%;
+      .img{
+        width: 100%;
+      }
+    }
+  }
+}
